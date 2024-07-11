@@ -1,0 +1,22 @@
+packages: packages are the software orginization unit of ros code. Each package can contaain libraries, executables, scripts, or other artifacts.
+manifests: A manifest is a description of a package. It serves to define dependencies between packages and to capture meta information about the package like version, maintainer, license, etc..
+
+3. Filesystem tools
+
+rospack it to avoid ls and cd
+rospack find - returns path to file
+
+roscd allows you to change the directory to a direct package
+you can also go to a sub directory by adding it to the end of the root
+root/sub
+looks like it can only jump around in
+
+roscd log takes you to the log folder
+
+rosls is like roscd but for ls
+
+Review
+You may have noticed a pattern with the naming of the ROS tools:
+rospack = ros + pack(age)
+roscd = ros + cd
+rosls = ros + ls
