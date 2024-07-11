@@ -1,0 +1,28 @@
+catkin Package:
+1. The package must contain a catkin compliant package.xml file. That package.xml file provides meta information about the package.
+2. The package must contain a CMakeLists.txt which uses catkin. If it is a catkin metapackage it must have the relevant boilerplate CMakeLists.txt file.
+3. Each package must have its own folder. This means no nested packages or sharing the same dir.
+
+example:
+package/
+  CMakeLists.txt
+  package.xml
+
+The reccomended method of working with theis is witha  catkin workspace
+
+workspace_folder/        -- WORKSPACE
+  src/                   -- SOURCE SPACE
+    CMakeLists.txt       -- 'Toplevel' CMake file, provided by catkin
+    package_1/
+      CMakeLists.txt     -- CMakeLists.txt file for package_1
+      package.xml        -- Package manifest for package_1
+    ...
+    package_n/
+      CMakeLists.txt     -- CMakeLists.txt file for package_n
+      package.xml        -- Package manifest for package_n
+
+catkin_make is a command that will make a workspace quickly
+source devel/setup.bash to init your source that you are working in
+
+you can use rospack to view the depends of the package
+rospack depends beginner_tutorials

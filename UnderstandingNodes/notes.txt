@@ -1,0 +1,16 @@
+Nodes: a node is an executable that usese ROS to communicate with other Nodes
+Messages: ROS data type used when subscribing or publishing to a topic.
+Topics: Nodes can publish messages to a topic as well as subscibe to a topic to get a messages
+Master: Name service for ROS
+rosout: ROS equivalent of stdout/stderr
+rosscore: master+rosout+parameter-server
+
+
+Nodes
+A node really isn't much more than an executable file within a ROS package. ROS nodes use a ROS client library to communicate with other nodes. Nodes can publish or subscribe to a Topic. Nodes can also provide or use a Service.
+
+Client libraries
+rospy = python client library
+roscpp = c++ client library
+
+roscore - is the first thing to run when using ROS
