@@ -1,0 +1,15 @@
+to record all published topics:
+
+rostopic list -v to look at all the published topics that are currently happening
+
+to record the data make a bagfile
+mkdir ~/bagfiles
+cd ~/bagfiles
+rosbag record -a
+
+
+to get the info in a bag
+rosbag info <bagfile>
+
+to step through the system:
+rosbag play <bagfile>

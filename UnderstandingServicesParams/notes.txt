@@ -1,0 +1,7 @@
+Services: a way that a node can communicate with another node. They allow nodes to send a request, and get a respnse
+
+rosservice used to manage Services
+things like api calls to Services
+
+rosparam is used to store and manipulate data on the parameter server
+basically global variables it seems?

@@ -1,0 +1,6 @@
+rosrun is used to run nodes
+rostopic is used to get information about the topic
+rostopic -h to get help
+
+rqt_graph shows everythign as a graph
+

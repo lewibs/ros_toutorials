@@ -1,0 +1,47 @@
+msg: txt files that are used to describe the fields of a ROS message. They are used for messages in different languages
+srv: a srv file describes a service. It is composed of two parts, a request, and a response.
+
+msgs are just simple text files with a field type and field name per line. The field types you can use are:
+
+int8, int16, int32, int64 (plus uint*)
+float32, float64
+string
+time, duration
+other msg files
+variable-length array[] and fixed-length array[C]
+
+There is also a special type in ROS: Header, the header contains a timestamp and coordinate frame information that are commonly used in ROS. You will frequently see the first line in a msg file have Header header.
+
+Here is an example of a msg that uses a Header, a string primitive, and two other msgs :
+  Header header
+  string child_frame_id
+  geometry_msgs/PoseWithCovariance pose
+  geometry_msgs/TwistWithCovariance twist
+
+
+srv files are just like msg files, except they contain two parts: a request and a response. The two parts are separated by a '---' line. Here is an example of a srv file:
+
+int64 A
+int64 B
+---
+int64 Sum
+
+
+rosmsg is then used to display the message
+rosmsg show beginner_tutorials/Num
+
+rossvr is used to display svr details
+
+rospack = ros+pack(age) : provides information related to ROS packages
+roscd = ros+cd : changes directory to a ROS package or stack
+
+rosls = ros+ls : lists files in a ROS package
+
+roscp = ros+cp : copies files from/to a ROS package
+
+rosmsg = ros+msg : provides information related to ROS message definitions
+rossrv = ros+srv : provides information related to ROS service definitions
+catkin_make : makes (compiles) a ROS package
+rosmake = ros+make : makes (compiles) a ROS package (if you're not using a catkin workspace)
+catkin build: makes (compiles) a ROS package in an isolated manner while maintaining efficiency due to parallelisation
+catkin_make + catkin_make_isolated

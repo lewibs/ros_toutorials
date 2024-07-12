@@ -1,0 +1,1 @@
+launch files are used to make the program start up many different nodes quickly rather then one at a time

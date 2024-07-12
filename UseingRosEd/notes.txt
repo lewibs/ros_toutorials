@@ -1,0 +1,3 @@
+rosed is part of the rosbash suite.
+
+it allows you to edit a file within a package
